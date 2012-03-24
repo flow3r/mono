@@ -81,7 +81,7 @@ namespace System.Net {
 		static EndPointListener GetEPListener (string host, int port, HttpListener listener, bool secure)
 		{
 			IPAddress addr;
-			if (IPAddress.TryParse(lp.Host, out addr) == false)
+			if (IPAddress.TryParse(host, out addr) == false)
 				addr = IPAddress.Any;
 
 			Hashtable p = null;  // Dictionary<int, EndPointListener>
